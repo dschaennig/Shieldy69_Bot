@@ -177,11 +177,11 @@ def main():
         ml = BotData()
 
 
-        ml.admins = [62435438]
+        ml.admins = []
         # enter your bot-token here
-        ml.token = '1584299429:AAF2uXeO6rcupQZuGAJKUKyCEkLOeLzMMhU'
+        ml.token = ''
         # enter your group-chat_id here
-        ml.group_id = -1001255935478
+        ml.group_id = 0
         pickle.dump(ml, open('botdata.pkl', 'wb'), -1)
 
     global updater
