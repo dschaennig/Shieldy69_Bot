@@ -36,6 +36,7 @@ def kick_member(update, context):
             chat_id = update.effective_chat.id,\
             text = "The command\n" + m_text +"\nwith its arguments is invalid"
             )
+        return
 
     # load botdata ( muteList, admins, group_id )
     ml = pickle.load(open('botdata.pkl', 'rb'))
@@ -74,6 +75,7 @@ def rem_mute_parse(update, context):
             chat_id = update.effective_chat.id,\
             text = "The command\n" + m_text +"\nwith its arguments is invalid"
             )
+        return
             
     # load botdata (admins, muteList, group_id)        
     ml = pickle.load(open('botdata.pkl', 'rb'))
@@ -175,11 +177,11 @@ def main():
         ml = BotData()
 
 
-        ml.admins = []
+        ml.admins = [62435438]
         # enter your bot-token here
-        ml.token = ''
+        ml.token = '1584299429:AAF2uXeO6rcupQZuGAJKUKyCEkLOeLzMMhU'
         # enter your group-chat_id here
-        ml.group_id = 0
+        ml.group_id = -1001255935478
         pickle.dump(ml, open('botdata.pkl', 'wb'), -1)
 
     global updater
