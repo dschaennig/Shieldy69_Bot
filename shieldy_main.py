@@ -171,6 +171,8 @@ def main():
     global updater
     updater = Updater(token = ml.token ,\
             use_context = True)
+
+    pickle.dump(ml, open('botdata.pkl', 'wb'), -1)
     
     del ml
 
