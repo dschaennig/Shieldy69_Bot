@@ -6,15 +6,7 @@ from telegram.ext import Updater, MessageHandler, Filters, CommandHandler, \
         InlineQueryHandler
 import pickle
 import logging
-
-
-class BotData:
-    
-    def __init__(self):
-        self.muteList = [] # contains user_ids of banned users
-        self.admins = [] # contains user_ids of admins
-        self.token = None # will contain the bot token
-        self.group_id = None # will contain id of the targeted group
+from BotData import Bot
 
 
 def kick_member(update, context):
@@ -174,7 +166,7 @@ def main():
     try:
         ml = pickle.load(open('botdata.pkl', 'rb'))
     except: # is only needed on the first start of the bot in a new enviroment
-        ml = BotData()
+        ml = Bot()
 
 
         ml.admins = []
