@@ -2,6 +2,15 @@
 A Bot against Telegram Spam-Accounts\
 Can be used to have more direct control over spam-accounts that enter your Telegram group.
 
+For this code to work, you need to have the ```python-telegram-bot``` module installed.\
+
+To install, use pip:\
+```pip install python-telegram-bot```
+or
+```pip3 install python-telegram-bot```\
+
+After installation you can reach the module through ```import telegram```
+
 # Initialization
 To initialize the bot, you need to add your own ```BotData.py``` file in the directory where your Bot runs.\
 The ```BotData.py``` should look like this:
